@@ -19,4 +19,15 @@
   <h1>EVENTS </h1><h3>at a glance..</h3><br>
   <a href="events" class="btn btn-lg">View all</a>
 </div>
+<script>
+$(window).scroll(function () {
+    if ($(window).scrollTop() >= 445) {
+      $("nav").css({"background-color": "rgba(0,0,0,0.4)"});
+      $("ul.nav a").css({"color": "rgba(238, 238, 238, 0.68)"});
+    } else {
+      $("nav").css({"background-color": "rgba(0,0,0,0)"});
+      $("ul.nav a").css({"color": "#888"});
+    }
+});
+</script>
 @endsection

@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost/anandotsava.in/public',
+    'url' => 'http://localhost/anandotsava.in',
 
     /*
     |--------------------------------------------------------------------------

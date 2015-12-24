@@ -42,15 +42,23 @@ function pad(item) {
   else
     return '0' + item;
 }
-$(window).scroll(function () {
-    if ($(window).scrollTop() >= 445) {
-      $("nav").css({"background-color": "rgba(0,0,0,0.4)"});
-      $("ul.nav a").css({"color": "rgba(238, 238, 238, 0.68)"});
-    } else {
-      $("nav").css({"background-color": "rgba(0,0,0,0)"});
-      $("ul.nav a").css({"color": "#888"});
-    }
-});
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip({placement: "bottom", animation: true});
+});
+var isSideOpen = true;
+$('#toggleSidebar').bind('click', function() {
+  if(isSideOpen) {
+    //$('#sidebar').addClass('hidden');
+    $("#sidebar").animate({opacity: "hide", left: -250}, "slow")
+    $('#toggleSidebar').removeClass('fa-arrow-left');
+    $('#toggleSidebar').addClass('fa-bars');
+
+    isSideOpen = false;
+  } else {
+    //$('#sidebar').removeClass('hidden');
+    $("#sidebar").animate({opacity: "show", left: 0}, "slow")
+    $('#toggleSidebar').removeClass('fa-bars');
+    $('#toggleSidebar').addClass('fa-arrow-left')
+    isSideOpen = true;
+  }
 });
